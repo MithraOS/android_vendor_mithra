@@ -82,6 +82,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# AdAway
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/app/AdAway/AdAway.apk:system/app/AdAway/AdAway.apk
+
+# AKT
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/app/AKT/AKT.apk:system/app/AKT/AKT.apk
+
+# Messenger
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/app/Messenger/Messenger.apk:system/app/Messenger/Messenger.apk
+
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
 
