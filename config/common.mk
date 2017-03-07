@@ -238,22 +238,20 @@ PRODUCT_VERSION_MAJOR = 7
 PRODUCT_VERSION_MINOR = 1
 PRODUCT_VERSION_MAINTENANCE := 1
 
-# Setup default Mithra version
-MITHRA_VERSION :=BETA-RC
-LINEAGE_VERSION := Mithra-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
-CM_DISPLAY_VERSION := Mithra-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(MITHRA_VERSION)
+# Setup default MithraOS version
+MITHRA_VERSION :=v1.0.1
+LINEAGE_VERSION := MithraOS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
+CM_DISPLAY_VERSION := MithraOS-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(MITHRA_VERSION)
 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mithra.version=$(LINEAGE_VERSION) \
     ro.modversion=$(LINEAGE_VERSION) \
+    ro.mithra.display.version=$(CM_DISPLAY_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/cm/build/target/product/security/lineage
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mithra.display.version=$(CM_DISPLAY_VERSION)
-
+    
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/cm/config/partner_gms.mk
 -include vendor/cyngn/product.mk
