@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
 
 #Substratum support
 PRODUCT_PACKAGES += \
-	masquerade
+	ThemeInterfacer
 
 # Exchange support
 PRODUCT_PACKAGES += \
