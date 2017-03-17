@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
+    CustomTiles \
     LineageSetupWizard \
     ExactCalculator \
     LiveLockScreenService \
